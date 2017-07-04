@@ -1,0 +1,11 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Deom Form: SKU</h2>
+  <form #f="ngForm" (ngSubmit)="addItems(f.value)" class="ui form">
+    <div class="field">
+      <label for="sku">SKU</label>
+      <input type="text" name="" id="skuInput" placeholder="SKU" name="sku" ngModel>
+    </div>
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>
+

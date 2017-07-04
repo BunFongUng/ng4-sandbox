@@ -1,0 +1,14 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Deom Form: SKU with watching change value of form control</h2>
+  <form [formGroup]="form" class="ui form" (ngSubmit)="onSubmit(form.value)">
+    <div class="ui info message">
+      Product name: {{ productName }}
+    </div>
+    <div class="field" [class.error]="!form.controls['productName'].valid && form.controls['productName'].touched">
+      <label for="productName">productName</label>
+      <input type="text" name="productName" id="productName" placeholder="Product Name" [formControl]="form.get('productName')" [(ngModel)]="productName">
+      <div *ngIf="form.invalid && form.controls['productName'].hasError('required')" class="ui error message">Product name is required</div>
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="ui button">Submit</button>
+  </form>
+</div>

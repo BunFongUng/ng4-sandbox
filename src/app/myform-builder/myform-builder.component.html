@@ -1,0 +1,12 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Deom Form: SKU with form builder</h2>
+  <form [formGroup]="form" class="ui form" (ngSubmit)="form.valid && addItem(form.value)">
+    <div class="field" [class.error]="!sku.valid && sku.touched">
+      <label for="sku">SKU</label>
+      <input type="text" name="sku" id="sku" placeholder="SKU" [formControl]="form.controls['sku']" required>
+      <div *ngIf="form.invalid && !sku.valid" class="ui error message">SKU is invalid</div>
+      <div *ngIf="form.invalid && sku.hasError('required')" class="ui error message">SKU is required</div>
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="ui button">Submit</button>
+  </form>
+</div>

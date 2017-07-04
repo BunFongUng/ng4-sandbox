@@ -1,0 +1,23 @@
+<h4 class="ui horizontal divider header">
+Nested Data
+</h4>
+
+<div *ngFor="let item of peoplesByCity; let idx = index" [style.margin-bottom.px]="20">
+  <h2 class="ui header">{{ item.city }}</h2>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>ID</th> 
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let people of item.peoples; let idx = index">
+        <td>{{ idx + 1 }}</td>
+        <td>{{ people.name }}</td>
+        <td>{{ people.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

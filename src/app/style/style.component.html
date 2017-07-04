@@ -1,0 +1,14 @@
+<div class="ui input">
+  <input type="text" name="color" value="{{ color }}" #colorInput>
+</div>
+
+<div class="ui input">
+  <input type="number" min="0" max="99" name="fontSize" value="{{ fontSize }}" #fontInput>
+</div>
+
+<button class="ui primary button" (click)="applySetting(colorInput.value, fontInput.value)">Apply Setting</button>
+
+
+<div>
+  <p [ngStyle]="{color: color}" [style.font-size.em]="fontSize">Hello Angular 4!</p>
+</div>
