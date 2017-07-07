@@ -15,6 +15,8 @@ import { WatchingChangeComponent } from './watching-change/watching-change.compo
 import { NgModelComponent } from './ng-model/ng-model.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 
+import { YoutubeServiceService } from './youtube-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,7 @@ import { SimpleHttpComponent } from './simple-http/simple-http.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ YoutubeServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
