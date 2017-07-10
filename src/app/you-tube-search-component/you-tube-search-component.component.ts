@@ -51,6 +51,11 @@ export let YoutebeServiceInjectables: Array<any> = [
     <input type="text" class="form-control" placeholder="Search" autofocus>
   `
 })
+export class SearchBox implements OnInit {
+  ngOnInit() {
+
+  }
+}
 
 @Component({
   selector: 'app-you-tube-search-component',
