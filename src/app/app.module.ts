@@ -16,6 +16,7 @@ import { NgModelComponent } from './ng-model/ng-model.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 
 import { YoutubeServiceService } from './youtube-service.service';
+import { YouTubeSearchComponentComponent } from './you-tube-search-component/you-tube-search-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { YoutubeServiceService } from './youtube-service.service';
     FormValidationComponent,
     WatchingChangeComponent,
     NgModelComponent,
-    SimpleHttpComponent
+    SimpleHttpComponent,
+    YouTubeSearchComponentComponent
   ],
   imports: [
     BrowserModule,

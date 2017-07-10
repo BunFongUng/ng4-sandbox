@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { YoutubeServiceService } from '../youtube-service.service';
 @Component({
   selector: 'app-simple-http',
   templateUrl: './simple-http.component.html',
@@ -8,7 +9,11 @@ import { Http, Response } from '@angular/http';
 export class SimpleHttpComponent implements OnInit {
   loading: boolean;
   data: object;
-  constructor(private http: Http) { }
+  query: string;
+  constructor(private http: Http, private youtubeService: YoutubeServiceService) {
+    this.query = 'cat';
+    console.log( this.youtubeService.search(this.query));
+  }
 
   makeRequest(): void {
     this.loading = true;
